@@ -1,0 +1,189 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Island+Moments&display=swap");
+
+/* main styles */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.underline {
+  text-decoration: underline;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+.hero{
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 4.5s;
+}
+.main-title {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.sub-title {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 0;
+}
+.icon {
+  width: 66px;
+  height: 66px;
+  background-color: #333333;
+  border-radius: 33px;
+  border: 1px solid #868686;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeUp 0.5s forwards; /* Fade up for icons */
+}
+.icon:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.icon:nth-child(2) {
+  animation-delay: 1s;
+}
+.icon:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.icon:nth-child(4) {
+  animation-delay: 2s;
+}
+.icon:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.icon:nth-child(6) {
+  animation-delay: 3s;
+}
+.icon:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.icon:nth-child(8) {
+  animation-delay: 4s;
+}
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  z-index: 2;
+}
+.footer-text {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  line-height: 24px;
+}
+.coming-soon {
+  font-size: 80px;
+  font-family: "Island Moments", sans-serif;
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeIn 1s forwards; /* Fade in for coming soon */
+  animation-delay: 5s; /* Delay to appear after icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fecb06;
+}
+.comingSoonDot {
+  display: inline-block;
+  opacity: 0; /* Start hidden for animation */
+}
+
+.active {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 50px;
+    font-family: "Inter", sans-serif;
+    padding-top: 10px;
+
+  }
+  .sub-title {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+  }
+  .social-icons {
+    margin: 30px 0;
+    padding-top: 20px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-text {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+  }
+  .coming-soon {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 36px;
+    font-family: "Inter", sans-serif;
+  }
+  .sub-title {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
+  .social-icons {
+    margin: 20px 0;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-text {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
+  .coming-soon {
+    font-size: 36px;
+  }
+}
